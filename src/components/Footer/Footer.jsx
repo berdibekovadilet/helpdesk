@@ -1,9 +1,35 @@
 import React from "react";
+import axios from "axios";
+import fileDownload from "js-file-download";
 import "./Footer.scss";
-import AnyDeskLogo from "../../assets/apps/AnyDeskLogo.svg";
-import TeamViewerLogo from "../../assets/apps/TeamViewerLogo.svg";
+import TeamViewerLogo from "../../assets/TeamViewerLogo.svg";
+import AnyDeskLogo from "../../assets/AnyDeskLogo.svg";
 
 const Footer = () => {
+  const downloadTeamViewer = (e) => {
+    e.preventDefault();
+    axios({
+      url: "http://helpdesk.kg/",
+      method: "GET",
+      responseType: "blob",
+    }).then((res) => {
+      console.log(res);
+      fileDownload(res.data, "../public/apps/TeamViewerQS.exe");
+    });
+  };
+
+  const downloadAnyDesk = (e) => {
+    e.preventDefault();
+    axios({
+      url: "http://helpdesk.kg/",
+      method: "GET",
+      responseType: "blob",
+    }).then((res) => {
+      console.log(res);
+      fileDownload(res.data, "../public/apps/AnyDesk.exe");
+    });
+  };
+
   return (
     <footer className="footer" id="footer">
       <div className="container">
@@ -15,17 +41,17 @@ const Footer = () => {
             <img src={TeamViewerLogo} alt="TeamViewerLogo" />
             <p>Срочная помощь с использованием удаленного рабочего стола.</p>
             <p className="only-for-windows">Только для ОС Windows</p>
-            <a href="../../assets/apps/TeamViewerQS.exe" className="hollow" download>
+            <button className="hollow" onClick={(e) => downloadTeamViewer(e)}>
               Нажмите чтобы скачать
-            </a>
+            </button>
           </li>
           <li className="footer__list_item">
             <img src={AnyDeskLogo} alt="AnyDesklogo" />
             <p>Эффективное подключение к удаленному рабочему столу.</p>
             <p className="only-for-windows">Только для ОС Windows</p>
-            <a href="../../assets/apps/AnyDesk.exe" className="hollow" download>
+            <button className="hollow" onClick={(e) => downloadAnyDesk(e)}>
               Нажмите чтобы скачать
-            </a>
+            </button>
           </li>
         </ul>
       </div>
