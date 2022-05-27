@@ -1,0 +1,78 @@
+@import "../../../index.scss";
+
+.sidebar__container {
+   position: fixed;
+   z-index: 999;
+   width: 100%;
+   height: 100%;
+   display: grid;
+   align-items: center;
+   top: -100%;
+   left: 0;
+   transition: 0.3s ease-in-out;
+   opacity: 1;
+   background-color: $Neutral500;
+}
+
+.sidebar__container-open {
+   position: fixed;
+   z-index: 999;
+   width: 100%;
+   height: 100%;
+   display: grid;
+   align-items: center;
+   top: 0;
+   left: 0;
+   transition: 0.3s ease-in-out;
+   opacity: 1;
+   background-color: $Neutral500;
+}
+
+.sidebar__icon {
+   position: absolute;
+   top: 1.2rem;
+   right: 1.5rem;
+   background: transparent;
+   font-size: 2rem;
+   cursor: pointer;
+   outline: none;
+   color: $Neutral100;
+}
+
+.sidebar__wrapper {
+   color: $Neutral100;
+}
+
+.sidebar__list {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   font-size: 1.5rem;
+   transition: 0.2s ease-in-out;
+}
+
+.sidebar__list_item {
+   margin-bottom: 30px;
+   a:hover {
+      color: $Primary500;
+      transition: 0.2s ease-in-out;
+   }
+}
+
+.sidebar__list_btn {
+   font-weight: 600;
+   padding: 14px 30px;
+   border-radius: 4px;
+   transition: 0.2s ease-in-out;
+   background-color: $Primary500;
+   color: $Neutral100;
+   text-align: center;
+
+
+   &:hover {
+      background-color: $Primary400;
+      color: $Neutral100;
+      transition: 0.2s ease-in-out;
+   }
+}

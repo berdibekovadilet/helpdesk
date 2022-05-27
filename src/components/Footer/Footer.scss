@@ -1,0 +1,56 @@
+@import "../../index.scss";
+
+.footer {
+   background-color: $Primary500;
+   color: $Neutral100;
+   padding: 20px 0 50px;
+}
+
+.footer__title {
+   color: $Neutral100;
+   padding: 3rem 0 1rem;
+}
+
+.footer__list {
+   padding: 40px 0px;
+   display: flex;
+}
+
+.footer__list_item {
+   margin-right: 1rem;
+
+   p {
+      max-width: 60%;
+      margin: 1.5rem 0;
+      color: $Neutral100;
+   }
+
+   .only-for-windows {
+      color: #a5a3d0;
+   }
+
+   a {
+      color: $Neutral100;
+      background-color: $Primary400;
+      padding: 15px 25px;
+      border-radius: 8px;
+   }
+}
+
+@media screen and (max-width: 768px) {
+   .footer__list {
+      flex-direction: column;
+   }
+
+   .footer__list_item {
+      margin-top: 2rem;
+
+      p {
+         max-width: 100%;
+      }
+
+      img {
+         max-width: 60%;
+      }
+   }
+}

@@ -1,0 +1,97 @@
+@import "../../index.scss";
+
+
+.respons {
+   padding: 0 0 120px;
+}
+
+.respons__row {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+.respons__img {
+   max-width: 500px;
+}
+
+.respons__content {
+   max-width: 578px;
+}
+
+.respons__content__list {
+   margin-top: 36px;
+}
+
+.respons__content__item {
+   display: flex;
+   margin-top: 24px;
+   img {
+      margin-right: 8px;
+   }
+}
+
+
+
+
+
+.why {
+   padding: 20px 0 120px;
+}
+.why__row {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   grid-gap: 110px;
+}
+
+.why__card {
+   padding: 40px 32px 40px;
+   border-radius: 10px;
+   background-color: #f9f9ff;
+
+   img {
+      width: 140px;
+   }
+
+   h4 {
+      margin: 24px 0;
+   }
+}
+
+
+// 900px
+
+@media (max-width: 900px) {
+   .respons__row {
+      align-items: center;
+      flex-direction: column;
+      align-items: flex-start;
+   }
+
+   .respons__content {
+      margin-top: 80px;
+   }
+
+   .why__row {
+      grid-template-columns: repeat(2, 1fr);
+   }
+}
+
+// 768px
+
+@media (max-width: 768px) {
+   .why__card {
+      padding: 40px 24px;
+   }
+   .why__row {
+      grid-template-columns: 1fr;
+      grid-gap: 40px;
+   }
+}
+
+// 480
+
+@media (max-width: 480px) {
+   .iconItem {
+      width: 32px;
+   }
+}

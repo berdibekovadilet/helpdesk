@@ -1,0 +1,72 @@
+@import "../../index.scss";
+
+.hero__section {
+   padding: 50px 0 120px;
+}
+
+.hero__row {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.hero__content {
+   max-width: 50%;
+}
+
+.hero__content * + * {
+   margin-top: 20px;
+}
+
+.hero__image {
+   max-width: 578px;
+   img {
+      max-width: 100%;
+      animation: animate 5s linear infinite;
+   }
+
+   @keyframes animate {
+      0%,
+      100% {
+         transform: translateY(50px);
+      }
+      50% {
+         transform: translateY(100px);
+      }
+   }
+}
+
+.bg__elements {
+   position: absolute;
+   top: 80px;
+   left: 0;
+   z-index: -999;
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+   background-attachment: scroll;
+   width: 100%;
+   height: 100vh;
+   opacity: 0.3;
+}
+
+
+@media (max-width: 900px) {
+   .hero__row {
+      justify-content: center;
+      flex-direction: column;
+      align-items: flex-start;
+   }
+
+   .hero__content {
+      max-width: 100%;
+   }
+}
+
+// 480px
+
+@media (max-width: 480px) {
+   .hero__section {
+      padding: 40px 0 60px;
+   }
+}

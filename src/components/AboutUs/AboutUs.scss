@@ -1,0 +1,162 @@
+@import "../../index.scss";
+
+.about {
+   padding: 120px 0;
+   position: relative;
+}
+
+.about__row {
+   display: flex;
+   justify-content: space-around;
+}
+
+.about__title {
+   text-align: center;
+   max-width: 850px;
+   margin: auto;
+}
+
+.about__card {
+   margin: 80px 20px 0px;
+   max-width: 328px;
+   padding: 20px 32px 40px;
+   background-color: $Neutral100;
+   box-shadow: 0px 0px 100px 0px #deebfe80;
+   border-radius: 10px;
+}
+
+.about__card__img {
+   height: auto;
+   max-width: 183px;
+   padding-bottom: 20px;
+   margin: 0 auto;
+}
+
+.img__monitoring {
+   height: auto;
+   max-width: 183px;
+   padding-top: 20px;
+   margin: 0 auto;
+}
+
+.about__card__title::after {
+   content: "";
+   height: 4px;
+   width: 163px;
+   background-color: $Primary400;
+   display: block;
+   margin-bottom: 24px;
+}
+
+.title__monitoring::after {
+   width: 153px;
+}
+
+.title__cctv::after {
+   width: 233px;
+}
+
+.BgElem1 {
+   position: absolute;
+   top: 200px;
+   right: 0;
+   z-index: -999;
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+   background-attachment: scroll;
+   width: 100px;
+   height: 20px;
+   opacity: 0.3;
+}
+
+.BgElem2 {
+   z-index: -999;
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+   background-attachment: scroll;
+   width: 100px;
+   height: 20px;
+   opacity: 0.3;
+}
+
+.team {
+   margin-bottom: 120px;
+}
+
+.team__row {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.team__content {
+   max-width: 578px;
+   position: relative;
+
+   p {
+      padding-top: 24px;
+   }
+}
+
+.team__rectangle {
+   position: absolute;
+   z-index: -999;
+   top: -30px;
+   left: -50px;
+   width: 180px;
+}
+
+// 1128px
+
+@media (max-width: 1128px) {
+   .about__card {
+      max-width: 300px;
+      padding: 20px 32px 40px;
+   }
+}
+
+// 900px
+
+@media (max-width: 900px) {
+   .about__card {
+      max-width: 328px;
+      padding: 20px 32px 40px;
+   }
+
+   .about__row {
+      align-items: center;
+      flex-direction: column;
+   }
+
+   .team__row {
+      align-items: center;
+      flex-direction: column;
+      align-items: flex-start;
+   }
+
+   .team__content {
+      margin-top: 80px;
+   }
+}
+
+// 480px
+
+@media (max-width: 480px) {
+   .about__title {
+      text-align: left;
+      padding-left: 20px;
+   }
+
+   .about__card {
+      max-width: 280px;
+      padding: 20px 32px 40px;
+   }
+
+   .team__rectangle {
+      width: 140px;
+      top: -30px;
+      left: -50px;
+   }
+}
