@@ -18,11 +18,59 @@
 
 .about__card {
    margin: 80px 20px 0px;
-   max-width: 328px;
+  width: 428px;
    padding: 20px 32px 40px;
    background-color: $Neutral100;
    box-shadow: 0px 0px 100px 0px #deebfe80;
    border-radius: 10px;
+   transition: all 0.3s ease;
+
+   &:hover {
+      box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2);
+   }
+
+   .header {
+      color: #111;
+      font-size: 25px;
+   }
+
+   li {
+      border-bottom: 1px solid #eee;
+      padding: 20px;
+      text-align: center;
+   }
+
+   .grey {
+      background-color: #eee;
+      font-size: 20px;
+   }
+
+   .price {
+      border: none;
+      color: black;
+      padding: 10px 25px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 18px;
+   }
+}
+
+.price_card {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.price__text {
+   text-align: center;
+   margin-top: 16px;
+}
+
+.price__before {
+   color: gray;
+   // font-size: 15px;
+   text-decoration: line-through;
+   margin-right: 15px;
 }
 
 .about__card__img {
@@ -121,7 +169,7 @@
 
 @media (max-width: 900px) {
    .about__card {
-      max-width: 328px;
+      max-width: 528px;
       padding: 20px 32px 40px;
    }
 
