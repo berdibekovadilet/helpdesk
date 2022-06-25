@@ -1,21 +1,17 @@
-import Header from "./components/Header/Header";
-import Hero from "./components/Hero/Hero";
-import AboutUs from "./components/AboutUs/AboutUs";
-import Services from "./components/Services/Services";
-import WhyWe from "./components/WhyWe/WhyWe";
-import GetTouch from "./components/GetTouch/GetTouch";
-import Footer from "./components/Footer/Footer";
+import Home from "./pages/Home";
+import Server from "./pages/Server";
+import { Routes, Route } from "react-router-dom";
+import ScrollToTop from "./tools/ScrollToTop";
 
 function App() {
   return (
     <>
-      <Header />
-      <Hero />
-      <AboutUs />
-      <Services />
-      <WhyWe />
-      <GetTouch />
-      <Footer />
+      <ScrollToTop>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="server" element={<Server />} />
+        </Routes>
+      </ScrollToTop>
     </>
   );
 }

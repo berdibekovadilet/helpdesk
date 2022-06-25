@@ -3,7 +3,7 @@ import "./MobileMenu.scss";
 import { FaTimes } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
-const MobileMenu = ({ menuOpen, menuToggler }) => {
+const MobileMenuServer = ({ menuOpen, menuToggler }) => {
   return (
     <div
       className={`${
@@ -17,10 +17,10 @@ const MobileMenu = ({ menuOpen, menuToggler }) => {
       <div className="sidebar__wrapper">
         <ul className="sidebar__list">
           <li className="sidebar__list_item">
-            <Link to="server">Аренда серверов</Link>
+            <Link to="/">Главная</Link>
           </li>
           <li className="sidebar__list_item">
-            <a href="#services">Услуги</a>
+            <a href="#price">Тарифы</a>
           </li>
           <li className="sidebar__list_item">
             <a href="#gettouch">Контакты</a>
@@ -39,4 +39,4 @@ const MobileMenu = ({ menuOpen, menuToggler }) => {
   );
 };
 
-export default MobileMenu;
+export default MobileMenuServer;

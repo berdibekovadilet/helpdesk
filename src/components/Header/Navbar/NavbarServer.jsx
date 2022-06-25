@@ -4,7 +4,7 @@ import Logo from "../../../assets/Logo.svg";
 import { FaBars } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
-const Navbar = ({ menuToggler }) => {
+const NavbarServer = ({ menuToggler }) => {
   return (
     <nav className="nav">
       <div className="nav__container">
@@ -19,10 +19,7 @@ const Navbar = ({ menuToggler }) => {
         </div>
         <ul className="nav__list">
           <li className="nav__list_item">
-            <Link to="server">Аренда серверов</Link>
-          </li>
-          <li className="nav__list_item">
-            <a href="#services">Услуги</a>
+            <a href="#price">Тарифы</a>
           </li>
           <li className="nav__list_item">
             <a href="#gettouch">Контакты</a>
@@ -41,4 +38,4 @@ const Navbar = ({ menuToggler }) => {
   );
 };
 
-export default Navbar;
+export default NavbarServer;
